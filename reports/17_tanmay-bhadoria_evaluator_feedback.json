@@ -1,0 +1,119 @@
+{
+  "prompt_digest": "Design a highly modular, production-ready Python component that loads a pretrained ResNet50 (without classification head), processes a batch of grayscale or RGB chest X-ray images, and outputs compact 2048-dimensional embeddings ready to feed into an LSTM-based decoder. The code should handle preprocessing, feature extraction, and dimension projection if required. While ensuring device compatibility (CPU/GPU), batching, and extensibility for other CNN backbones.",
+  "expert_evaluation": {
+    "correctness": {
+      "score": 1,
+      "justification": "The code contains significant errors: broken docstrings, incorrect use of ToTensor, projection not in eval mode, inefficient tensor-numpy conversions."
+    },
+    "completeness": {
+      "score": 2,
+      "justification": "Missing features: multi-backbone support beyond ResNet50, spatial feature map output, mixed precision, multi-GPU support, robust preprocessing."
+    },
+    "relevance": {
+      "score": 3,
+      "justification": "Addresses core requirements but includes unnecessary elements like a dataloader and augmentation options."
+    },
+    "style": {
+      "score": 1,
+      "justification": "Broken docstrings severely impact readability. Mixing tensor and numpy in public APIs is poor style."
+    },
+    "coherence": {
+      "score": 2,
+      "justification": "Inconsistent module state (projection not in eval), returning numpy from a PyTorch API, and a flawed preprocessing pipeline reduce coherence."
+    },
+    "helpfulness": {
+      "score": 2,
+      "justification": "Provides a scaffold but the errors prevent clean execution.  Lack of spatial output limits usefulness."
+    },
+    "creativity": {
+      "score": 2,
+      "justification": "Uses standard engineering patterns, nothing particularly novel."
+    }
+  },
+  "alignment_check": {
+    "correctness": {
+      "expert": 1,
+      "human": 1,
+      "aligned": true,
+      "difference": 0
+    },
+    "completeness": {
+      "expert": 2,
+      "human": 2,
+      "aligned": true,
+      "difference": 0
+    },
+    "relevance": {
+      "expert": 3,
+      "human": 3,
+      "aligned": true,
+      "difference": 0
+    },
+    "style": {
+      "expert": 1,
+      "human": 1,
+      "aligned": true,
+      "difference": 0
+    },
+    "coherence": {
+      "expert": 2,
+      "human": 2,
+      "aligned": true,
+      "difference": 0
+    },
+    "helpfulness": {
+      "expert": 2,
+      "human": 2,
+      "aligned": true,
+      "difference": 0
+    },
+    "creativity": {
+      "expert": 2,
+      "human": 2,
+      "aligned": true,
+      "difference": 0
+    }
+  },
+  "justification_quality": {
+    "correctness": {
+      "quality_score": 5,
+      "issues": [],
+      "rating_reduction": 0
+    },
+    "completeness": {
+      "quality_score": 5,
+      "issues": [],
+      "rating_reduction": 0
+    },
+    "relevance": {
+      "quality_score": 5,
+      "issues": [],
+      "rating_reduction": 0
+    },
+    "style": {
+      "quality_score": 5,
+      "issues": [],
+      "rating_reduction": 0
+    },
+    "coherence": {
+      "quality_score": 5,
+      "issues": [],
+      "rating_reduction": 0
+    },
+    "helpfulness": {
+      "quality_score": 5,
+      "issues": [],
+      "rating_reduction": 0
+    },
+    "creativity": {
+      "quality_score": 5,
+      "issues": [],
+      "rating_reduction": 0
+    }
+  },
+  "evaluator_feedback": {
+    "score": 5,
+    "notes": "Your evaluation aligns well with expert assessment.  The justifications are clear, specific, and well-supported by evidence from the code.",
+    "justification_quality_summary": "All justifications are of high quality, providing specific examples and logical reasoning."
+  }
+}

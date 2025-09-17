@@ -1,0 +1,123 @@
+{
+  "prompt_digest": "Design a highly modular, production-ready Python component that loads a pretrained ResNet50 (without classification head), processes a batch of grayscale or RGB chest X-ray images, and outputs compact 2048-dimensional embeddings ready to feed into an LSTM-based decoder. The code should handle preprocessing, feature extraction, and dimension projection if required. While ensuring device compatibility (CPU/GPU), batching, and extensibility for other CNN backbones. Just provide the backend code in python for feature extractor in a single file with clean interfaces, detailed docstrings, and industry-quality structure.",
+  "expert_evaluation": {
+    "correctness": {
+      "score": 4,
+      "justification": "The core functionality of loading a pretrained ResNet50, processing image batches, and generating embeddings is implemented.  However, the use of deprecated functions and hardcoded dimensions detract from perfect correctness."
+    },
+    "completeness": {
+      "score": 3,
+      "justification": "The code addresses preprocessing, feature extraction, and device handling.  However, it lacks robust error handling and extensibility to other CNN backbones beyond the basic implementation."
+    },
+    "relevance": {
+      "score": 5,
+      "justification": "The code directly addresses all aspects of the prompt, focusing on the creation of a modular feature extraction component for medical imaging."
+    },
+    "style": {
+      "score": 4,
+      "justification": "The code generally follows good style guidelines, but could benefit from more comprehensive and explanatory comments and docstrings."
+    },
+    "coherence": {
+      "score": 4,
+      "justification": "The solution is logically structured, with a clear separation of concerns. However, some minor inconsistencies exist in parameter handling and configuration."
+    },
+    "helpfulness": {
+      "score": 3,
+      "justification": "The code is helpful as a starting point, but lacks sufficient examples and integration guidance to be immediately useful in a production environment."
+    },
+    "creativity": {
+      "score": 3,
+      "justification": "The modular design is a positive aspect, but the code's extensibility and support for advanced features are limited, hindering its creativity score."
+    }
+  },
+  "alignment_check": {
+    "correctness": {
+      "expert": 4,
+      "human": 3,
+      "aligned": false,
+      "difference": 1
+    },
+    "completeness": {
+      "expert": 3,
+      "human": 4,
+      "aligned": false,
+      "difference": 1
+    },
+    "relevance": {
+      "expert": 5,
+      "human": 4,
+      "aligned": true,
+      "difference": 1
+    },
+    "style": {
+      "expert": 4,
+      "human": 3,
+      "aligned": true,
+      "difference": 1
+    },
+    "coherence": {
+      "expert": 4,
+      "human": 4,
+      "aligned": true,
+      "difference": 0
+    },
+    "helpfulness": {
+      "expert": 3,
+      "human": 4,
+      "aligned": true,
+      "difference": 1
+    },
+    "creativity": {
+      "expert": 3,
+      "human": 4,
+      "aligned": true,
+      "difference": 1
+    }
+  },
+  "justification_quality": {
+    "correctness": {
+      "quality_score": 4,
+      "issues": [],
+      "rating_reduction": 0
+    },
+    "completeness": {
+      "quality_score": 3,
+      "issues": [
+        "Justification is vague; needs specific examples of missing features."
+      ],
+      "rating_reduction": 1
+    },
+    "relevance": {
+      "quality_score": 5,
+      "issues": [],
+      "rating_reduction": 0
+    },
+    "style": {
+      "quality_score": 4,
+      "issues": [],
+      "rating_reduction": 0
+    },
+    "coherence": {
+      "quality_score": 4,
+      "issues": [],
+      "rating_reduction": 0
+    },
+    "helpfulness": {
+      "quality_score": 3,
+      "issues": [
+        "Justification lacks specific examples of missing help."
+      ],
+      "rating_reduction": 1
+    },
+    "creativity": {
+      "quality_score": 4,
+      "issues": [],
+      "rating_reduction": 0
+    }
+  },
+  "evaluator_feedback": {
+    "score": 4,
+    "notes": "The evaluator's ratings are mostly aligned with the expert assessment, with minor discrepancies.  However, several justifications lack the specificity and evidence required for a higher quality assessment.  Specifically, the justifications for completeness and helpfulness need improvement by citing specific code examples to support the claims.  The overall assessment is good but could be significantly improved with more detailed and evidence-based justifications.",
+    "justification_quality_summary": "Several justifications lacked sufficient detail and specific examples.  Improvements in justification quality would lead to a more accurate and reliable evaluation."
+  }
+}

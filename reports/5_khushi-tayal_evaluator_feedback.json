@@ -1,0 +1,119 @@
+{
+  "prompt_digest": "Design a highly modular, production-ready Python component that loads a pretrained ResNet50 (without classification head), processes a batch of grayscale or RGB chest X-ray images, and outputs compact 2048-dimensional embeddings ready to feed into an LSTM-based decoder. The code should handle preprocessing, feature extraction, and dimension projection if required. While ensuring device compatibility (CPU/GPU), batching, and extensibility for other CNN backbones.",
+  "expert_evaluation": {
+    "correctness": {
+      "score": 4,
+      "justification": "Response 1 has some minor implementation errors (ToTensor() misuse, deprecated 'pretrained' flag, malformed docstrings). Response 2 is mostly correct but uses deprecated 'pretrained' flag."
+    },
+    "completeness": {
+      "score": 4,
+      "justification": "Both responses address core requirements but lack comprehensive batching and extensibility demonstrations. Response 2 is slightly more complete."
+    },
+    "relevance": {
+      "score": 5,
+      "justification": "Both responses are highly relevant to the prompt's medical imaging captioning task. They correctly use ResNet50 and output 2048-dim embeddings."
+    },
+    "style": {
+      "score": 4,
+      "justification": "Both have good structure. Response 1 has malformed docstrings. Response 2 has slightly better style and presentation."
+    },
+    "coherence": {
+      "score": 4,
+      "justification": "Both are coherent. Response 1 has minor coherence issues due to errors. Response 2 is slightly more coherent."
+    },
+    "helpfulness": {
+      "score": 3,
+      "justification": "Both are helpful. Response 1 has usability issues due to errors. Response 2 is slightly more helpful."
+    },
+    "creativity": {
+      "score": 3,
+      "justification": "Neither shows significant creativity beyond standard practices.  Both use standard ResNet50 feature extraction."
+    }
+  },
+  "alignment_check": {
+    "correctness": {
+      "expert": 4,
+      "human": 3,
+      "aligned": true,
+      "difference": 1
+    },
+    "completeness": {
+      "expert": 4,
+      "human": 4,
+      "aligned": true,
+      "difference": 0
+    },
+    "relevance": {
+      "expert": 5,
+      "human": 4,
+      "aligned": true,
+      "difference": 1
+    },
+    "style": {
+      "expert": 4,
+      "human": 4,
+      "aligned": true,
+      "difference": 0
+    },
+    "coherence": {
+      "expert": 4,
+      "human": 4,
+      "aligned": true,
+      "difference": 0
+    },
+    "helpfulness": {
+      "expert": 3,
+      "human": 3,
+      "aligned": true,
+      "difference": 0
+    },
+    "creativity": {
+      "expert": 3,
+      "human": 4,
+      "aligned": true,
+      "difference": 1
+    }
+  },
+  "justification_quality": {
+    "correctness": {
+      "quality_score": 4,
+      "issues": [],
+      "rating_reduction": 0
+    },
+    "completeness": {
+      "quality_score": 4,
+      "issues": [],
+      "rating_reduction": 0
+    },
+    "relevance": {
+      "quality_score": 4,
+      "issues": [],
+      "rating_reduction": 0
+    },
+    "style": {
+      "quality_score": 4,
+      "issues": [],
+      "rating_reduction": 0
+    },
+    "coherence": {
+      "quality_score": 4,
+      "issues": [],
+      "rating_reduction": 0
+    },
+    "helpfulness": {
+      "quality_score": 4,
+      "issues": [],
+      "rating_reduction": 0
+    },
+    "creativity": {
+      "quality_score": 4,
+      "issues": [],
+      "rating_reduction": 0
+    }
+  },
+  "evaluator_feedback": {
+    "score": 5,
+    "notes": "Your evaluation aligns well with expert assessment.  Justifications are generally good, providing specific examples and logical reasoning.  Minor improvements could be made by being more precise in quantifying the impact of minor issues (e.g., 'slightly reduces polish' could be more specific).",
+    "justification_quality_summary": "Justifications are mostly good, providing specific examples and logical reasoning. Minor improvements could be made in precision."
+  }
+}
